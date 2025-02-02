@@ -25,36 +25,37 @@ const CorporateBooking = () => {
   };
 
   return (
-    <div className="bg-black mt-[75px] font-outfit px-[100px]">
+    <div className="bg-black mt-[60px] font-outfit px-8 md:px-24 lg:px-[100px]">
       {/* Header */}
-      <div className="py-12">
+      <div className="py-12 mt-10">
         <div className="container text-center text-white">
-          <h1 className="text-4xl font-bold">Corporate Trainings</h1>
-          <p className="mt-3 text-lg font-poppins">
+          <h1 className="text-3xl md:text-5xl font-outfit font-bold leading-snug">
+            Corporate Trainings
+          </h1>
+          <p className="mt-3 text-base md:text-lg font-poppins">
             At NxtHack It Solutions, we specialize in delivering high-impact
             corporate training solutions designed to bridge skill gaps and boost
             workforce productivity. Our expert trainers bring years of industry
             experience, ensuring that your teams receive practical, real-world
             knowledge.
           </p>
-          <div className="absolute w-72 h-72 bg-gradient-to-r from-purple-700 via-pink-500 to-pink-300 rounded-full blur-3xl opacity-50 -top-24 -right-10"></div>
-          <div className="absolute w-72 h-72 bg-gradient-to-r from-purple-700 via-pink-500 to-pink-300 rounded-full blur-3xl opacity-50 -top-24 -left-10"></div>
-          <div className="absolute w-96 h-96 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full blur-3xl opacity-40 -bottom-10 -left-16"></div>
-          <div className="absolute w-96 h-96 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full blur-3xl opacity-40 -bottom-10 -right-16"></div>
+          <div className="absolute w-72 h-72 bg-gradient-to-r from-purple-700 via-pink-500 to-pink-300 rounded-full blur-3xl opacity-50 -top-24 -right-10 hidden md:block"></div>
+          <div className="absolute w-72 h-72 bg-gradient-to-r from-purple-700 via-pink-500 to-pink-300 rounded-full blur-3xl opacity-50 -top-24 -left-10 hidden md:block"></div>
+          <div className="absolute w-96 h-96 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full blur-3xl opacity-40 -bottom-10 -left-16 hidden lg:block"></div>
+          <div className="absolute w-96 h-96 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full blur-3xl opacity-40 -bottom-10 -right-16 hidden lg:block"></div>
         </div>
       </div>
 
       {/* Booking Form Section */}
-
-      <section className="py-12 ">
+      <section className="pb-10">
         <div className="container mx-auto text-center">
-          <div className="max-w-lg mx-auto mt-8  bg-gray-50 p-8 rounded-lg shadow-lg">
-            <h2 className="mb-10 font-bold text-6xl tracking-wide">
+          <div className="max-w-lg mx-auto bg-gray-50 p-8 rounded-lg shadow-lg">
+            <h2 className="mb-10 font-bold text-4xl md:text-6xl tracking-wide">
               <span>ENQUIRE </span> NOW
             </h2>
             <form onSubmit={handleSubmit} className="">
               <div className="space-y-4">
-                <div className="flex justify-between gap-5">
+                <div className="flex flex-col md:flex-row justify-between gap-5">
                   <div>
                     <label
                       htmlFor="companyName"
@@ -92,7 +93,7 @@ const CorporateBooking = () => {
                     />
                   </div>
                 </div>
-                <div className="flex justify-between gap-5">
+                <div className="flex flex-col md:flex-row justify-between gap-5">
                   <div>
                     <label
                       htmlFor="email"
