@@ -1,11 +1,18 @@
 import { Link } from "react-router-dom";
+import BookDemo from "../../common/BookDemo";
+import { useState } from "react";
 
 const HeroSection = () => {
+  const [isFormVisible, setIsFormVisible] = useState(false);
   return (
     <section
       className="relative w-full min-h-screen bg-cover bg-center pt-20"
       style={{ backgroundImage: "url('/bg-section.jpg')" }}
     >
+      <BookDemo
+        isFormVisible={isFormVisible}
+        setIsFormVisible={setIsFormVisible}
+      />
       <div className="absolute inset-0 bg-black opacity-80"></div>{" "}
       {/* Overlay for readability */}
       <div className="relative z-10 gap-10 container mx-auto px-6 py-24 flex flex-col items-center justify-center text-center text-white">
@@ -22,12 +29,12 @@ const HeroSection = () => {
           to the next level with hands-on, interactive learning experiences.
         </p>
         <div>
-          <Link
-            to="/contact"
-            className="bg-[#bf1cd1cb] font-poppins hover:bg-purple-500 text-white py-2 px-6 rounded-md text-xl transition-all duration-300"
+          <button
+            onClick={() => setIsFormVisible(true)}
+            className="bg-blue-500 text-white px-6 py-2 rounded"
           >
-            Get Started Today
-          </Link>
+            Book a Free Demo
+          </button>
           <p className="text-sm mt-5">
             <Link
               to="/courses"

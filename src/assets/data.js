@@ -1,0 +1,167 @@
+export const popularCourses = [
+  {
+    title: "Web Development",
+    description:
+      "Learn the fundamentals of web development, including HTML, CSS, JavaScript, and frameworks like React and Node.js.",
+    icon: "fas fa-laptop-code", // Example icon
+  },
+  {
+    title: "Data Science",
+    description:
+      "Get hands-on experience with data analysis, machine learning, and tools like Python, Pandas, and TensorFlow.",
+    icon: "fas fa-database", // Example icon
+  },
+  {
+    title: "Machine Learning",
+    description:
+      "Dive into machine learning algorithms and gain hands-on experience in building and deploying ML models.",
+    icon: "fas fa-brain", // Example icon
+  },
+  {
+    title: "Digital Marketing",
+    description:
+      "Learn the essential skills for SEO, SEM, content marketing, and social media strategies to promote your business online.",
+    icon: "fas fa-bullhorn", // Example icon
+  },
+  {
+    title: "Cybersecurity",
+    description:
+      "Understand the essentials of cybersecurity, from ethical hacking to securing systems and networks.",
+    icon: "fas fa-shield-alt", // Example icon
+  },
+  {
+    title: "Blockchain Development",
+    description:
+      "Learn blockchain technology, smart contract development, and how to create decentralized applications (DApps).",
+    icon: "fas fa-cogs", // Example icon
+  },
+];
+
+export const courses = [
+  {
+    title: "Web Development",
+    description:
+      "Learn the fundamentals of web development, including HTML, CSS, JavaScript, and frameworks like React and Node.js.",
+    icon: "fas fa-laptop-code", // Example icon
+  },
+  {
+    title: "Data Science",
+    description:
+      "Get hands-on experience with data analysis, machine learning, and tools like Python, Pandas, and TensorFlow.",
+    icon: "fas fa-database", // Example icon
+  },
+  {
+    title: "Mobile App Development",
+    description:
+      "Master mobile app development for iOS and Android using frameworks like React Native and Flutter.",
+    icon: "fas fa-mobile-alt", // Example icon
+  },
+  {
+    title: "Digital Marketing",
+    description:
+      "Learn the essential skills for SEO, SEM, content marketing, and social media strategies to promote your business online.",
+    icon: "fas fa-bullhorn", // Example icon
+  },
+  {
+    title: "Machine Learning",
+    description:
+      "Dive into machine learning algorithms and gain hands-on experience in building and deploying ML models.",
+    icon: "fas fa-brain", // Example icon
+  },
+  {
+    title: "Cybersecurity",
+    description:
+      "Understand the essentials of cybersecurity, from ethical hacking to securing systems and networks.",
+    icon: "fas fa-shield-alt", // Example icon
+  },
+  {
+    title: "Cloud Computing",
+    description:
+      "Explore cloud platforms like AWS, Google Cloud, and Azure, and learn to build scalable and reliable cloud infrastructure.",
+    icon: "fas fa-cloud", // Example icon
+  },
+  {
+    title: "Blockchain Development",
+    description:
+      "Learn blockchain technology, smart contract development, and how to create decentralized applications (DApps).",
+    icon: "fas fa-cogs", // Example icon
+  },
+  {
+    title: "Artificial Intelligence",
+    description:
+      "Master AI concepts, including neural networks, natural language processing (NLP), and reinforcement learning.",
+    icon: "fas fa-robot", // Example icon
+  },
+  {
+    title: "Game Development",
+    description:
+      "Get hands-on experience with game development using Unity and Unreal Engine, along with game design principles.",
+    icon: "fas fa-gamepad", // Example icon
+  },
+  {
+    title: "DevOps",
+    description:
+      "Learn the principles of DevOps, including CI/CD, infrastructure as code, and automation tools like Docker and Kubernetes.",
+    icon: "fas fa-cogs", // Example icon
+  },
+  {
+    title: "UI/UX Design",
+    description:
+      "Understand the principles of user interface and user experience design, including wireframing, prototyping, and design tools.",
+    icon: "fas fa-paint-brush", // Example icon
+  },
+  {
+    title: "Robotic Process Automation (RPA)",
+    description:
+      "Learn how to automate business processes using RPA tools like UiPath and Automation Anywhere.",
+    icon: "fas fa-robot", // Example icon
+  },
+  {
+    title: "Virtual Reality (VR)",
+    description:
+      "Get started with creating immersive experiences and applications using Virtual Reality technology.",
+    icon: "fas fa-vr-cardboard", // Example icon
+  },
+  {
+    title: "Networking",
+    description:
+      "Learn the basics of computer networking, including protocols, IP addressing, and network security.",
+    icon: "fas fa-network-wired", // Example icon
+  },
+  {
+    title: "Enterprise Resource Planning (ERP)",
+    description:
+      "Master ERP systems, including SAP, Microsoft Dynamics, and Oracle ERP, to help businesses manage and integrate business processes.",
+    icon: "fas fa-briefcase", // Example icon
+  },
+  {
+    title: "Business Intelligence (BI)",
+    description:
+      "Learn the techniques used to analyze business data and make data-driven decisions using BI tools like Power BI and Tableau.",
+    icon: "fas fa-chart-bar", // Example icon
+  },
+  {
+    title: "Internet of Things (IoT)",
+    description:
+      "Understand the fundamentals of IoT, including sensors, data collection, and building IoT applications and systems.",
+    icon: "fas fa-plug", // Example icon
+  },
+  {
+    title: "5G Technology",
+    description:
+      "Explore the latest advancements in mobile networks with 5G technology, including speed, latency, and real-time applications.",
+    icon: "fas fa-signal", // Example icon
+  },
+  {
+    title: "Python Programming",
+    description:
+      "Learn Python, one of the most versatile programming languages, and apply it to web development, automation, and data analysis.",
+    icon: "fas fa-python", // Example icon
+  },
+  {
+    title: "Flutter Development",
+    description:
+      "Get hands-on experience building cross-platform mobile apps using the Flutter framework and Dart language.",
+    icon: "fas fa-mobile-alt", // Example icon
+  },
+];

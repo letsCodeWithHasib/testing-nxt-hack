@@ -1,5 +1,5 @@
-// ServicesOverview.js
 import React, { useEffect, useRef } from "react";
+import { FaArrowRight } from "react-icons/fa"; // Importing arrow icon from react-icons
 
 const services = [
   {
@@ -36,7 +36,7 @@ const services = [
     title: "Project Development Assistance",
     description:
       "We assist you in developing your projects from start to finish, including planning, implementation, and support for web, mobile, and software projects.",
-    icon: "fas fa-cogs",
+    icon: "fas fa-cogs", // Font Awesome icon
   },
 ];
 
@@ -66,7 +66,7 @@ const ServicesOverview = () => {
 
   return (
     <section className="py-10 bg-gray-100" id="services">
-      <div className="container mx-auto  text-center">
+      <div className="container mx-auto text-center">
         <h2 className="text-5xl font-semibold mb-10 font-outfit text-purple-700">
           Our Services
         </h2>
@@ -75,17 +75,27 @@ const ServicesOverview = () => {
             <div
               key={index}
               ref={(el) => (serviceRefs.current[index] = el)} // Attach refs to cards
-              className="service-card bg-white p-6 rounded-lg shadow-lg transition-all transform"
+              className="service-card bg-white p-6 rounded-lg shadow-lg transition-all transform relative group"
             >
+              {/* Service Icon */}
               <div className="text-4xl text-purple-700 mb-4">
                 <i className={`${service.icon} text-purple-700`}></i>
               </div>
+
+              {/* Service Title */}
               <h3 className="text-xl font-bold mb-4 font-outfit text-purple-800">
                 {service.title}
               </h3>
-              <p className="text-gray-700 font-poppins">
+
+              {/* Service Description */}
+              <p className="text-gray-700 font-poppins mb-4">
                 {service.description}
               </p>
+
+              {/* Arrow Icon */}
+              <div className="absolute  opacity-0 group-hover:opacity-100 -rotate-90 p-2 border-purple-700 border rounded-full top-4 right-4 group-hover:rotate-0 transition-transform duration-500">
+                <FaArrowRight className="text-purple-700 text-2xl" />
+              </div>
             </div>
           ))}
         </div>
