@@ -19,7 +19,7 @@ const CoursePage = () => {
 
   return (
     <section className="w-full">
-      <div className="relative w-full h-screen mt-[75px]">
+      <div className="relative w-full min-h-screen mt-[65px]">
         {/* Video */}
         <video
           className="absolute w-full h-full object-cover"
@@ -34,25 +34,25 @@ const CoursePage = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-800 opacity-70"></div>
 
         {/* Header */}
-        <div className="py-20 relative px-[100px]">
+        <div className="py-20 relative px-5 md:px-[100px]">
           <div className="container mx-auto w-full text-center text-white mt-10">
-            <h1 className="text-5xl font-bold">
+            <h1 className="text-3xl sm:text-5xl font-bold">
               Unlock Your Potential with Our Expert-Led Courses
             </h1>
-            <p className="mt-2 text-2xl font-poppins text-white">
+            <p className="mt-2 text-lg sm:text-2xl font-poppins text-white">
               Enhance Your Skills with Our Specialized Programs for Students,
               Professionals, and Lifelong Learners
             </p>
-            <p className="mt-5 text-xl font-poppins text-white">
+            <p className="mt-5 text-base sm:text-xl font-poppins text-white">
               At NxtHack IT Solutions, we understand that learning needs differ
               from person to person. Whether you’re a college student looking to
               gain industry-relevant skills, a corporate professional seeking to
               upskill, or an individual passionate about continuous learning,
-              our diverse range of courses has something for everyone
+              our diverse range of courses has something for everyone.
             </p>
 
             <div className="mt-10">
-              <button className="bg-white text-black uppercase text-3xl font-outfit font-bold py-5 px-10 mt-10 rounded">
+              <button className="bg-white text-black uppercase text-xl sm:text-3xl font-outfit font-bold py-5 px-10 mt-10 rounded">
                 Get a Call
               </button>
             </div>
@@ -64,17 +64,17 @@ const CoursePage = () => {
         </div>
       </div>
 
-      <section className="py-10 bg-gray-100 px-[100px]" id="courses">
+      <section className="py-10 bg-gray-100 px-4 md:px-[100px]" id="courses">
         <div className="container mx-auto text-center w-full">
-          <h2 className="text-5xl font-semibold mb-10 font-outfit text-purple-700">
+          <h2 className="text-4xl sm:text-5xl font-semibold mb-10 font-outfit text-purple-700">
             Our Courses
           </h2>
-          <p className="mb-10 text-xl text-gray-600">
+          <p className="mb-10 text-lg sm:text-xl text-gray-600">
             Choose from a variety of courses designed to help you excel in the
             world of technology.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-12 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 w-full">
             {courses
               .slice(0, showAllCourses ? courses.length : 6)
               .map((course, index) => (
@@ -82,10 +82,10 @@ const CoursePage = () => {
                   key={index}
                   className="course-card bg-white p-6 rounded-lg shadow-lg relative group w-full"
                 >
-                  <div className="text-4xl text-purple-700 mb-4">
+                  <div className="text-3xl sm:text-4xl text-purple-700 mb-4">
                     <i className={`${course.icon} text-purple-700`}></i>
                   </div>
-                  <h3 className="text-xl font-bold mb-4 font-outfit text-purple-800">
+                  <h3 className="text-lg sm:text-xl font-bold mb-4 font-outfit text-purple-800">
                     {course.title}
                   </h3>
                   <p className="text-gray-700 font-poppins mb-4">
