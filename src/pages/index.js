@@ -5,6 +5,7 @@ import Services from "./Services";
 import Testing from "./Testing";
 import Courses from "./Courses";
 import CorporateBooking from "./CorporateBooking";
+import Consulting from "./Consulting";
 
 export {
   About as AboutPage,
@@ -13,5 +14,6 @@ export {
   Services as ServicePage,
   Courses as CoursePage,
   CorporateBooking as CorporateBookingPage,
+  Consulting as ConsultingPage,
   Testing,
 };

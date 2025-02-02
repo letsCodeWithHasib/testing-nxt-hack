@@ -76,14 +76,14 @@ const PopularCourses = () => {
           </div>
         ))}
       </div>
-      <div className="text-right mt-8 flex justify-between items-center gap-5 text-xl font-poppins">
+      <div className="mt-8 flex flex-col sm:flex-row justify-between items-center gap-5 text-xl font-poppins">
         <div className="flex items-center gap-5">
           <p className="font-semibold underline">Want a customized course ? </p>
           <button className="bg-blue-500 text-white font-[Roboto] px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300">
             Get Customization
           </button>
         </div>
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-5 mt-5 sm:mt-0">
           <p className="font-semibold underline">
             Want to explore more courses ?{" "}
           </p>

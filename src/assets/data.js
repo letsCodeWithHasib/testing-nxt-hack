@@ -165,3 +165,42 @@ export const courses = [
     icon: "fas fa-mobile-alt", // Example icon
   },
 ];
+
+export const services = [
+  {
+    title: "Corporate Training",
+    description:
+      "Custom training solutions for businesses to upskill teams with the latest technologies like Angular, Django, and ASP.NET Core.",
+    icon: "fas fa-briefcase", // Font Awesome icon
+  },
+  {
+    title: "Live online classes",
+    description:
+      "NxtHack provides online live interactive sessions to help individuals gain expertise in various technologies and development practices.",
+    icon: "fas fa-laptop-code", // Font Awesome icon
+  },
+  {
+    title: "Consulting",
+    description:
+      "Expert consulting services to help organizations improve their development processes and optimize workflows.",
+    icon: "fas fa-chalkboard-teacher", // Font Awesome icon
+  },
+  {
+    title: "Work Support on Requirement",
+    description:
+      "Tailored work support services based on your specific project needs. We provide flexible and scalable solutions, from code reviews to full team assistance.",
+    icon: "fas fa-headset", // Font Awesome icon
+  },
+  {
+    title: "College Training",
+    description:
+      "Training programs designed for colleges to help students gain real-world skills in web development, data science, and more.",
+    icon: "fas fa-university", // Font Awesome icon
+  },
+  {
+    title: "Project Development Assistance",
+    description:
+      "We assist you in developing your projects from start to finish, including planning, implementation, and support for web, mobile, and software projects.",
+    icon: "fas fa-cogs", // Font Awesome icon
+  },
+];

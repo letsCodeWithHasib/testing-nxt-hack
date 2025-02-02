@@ -1,5 +1,5 @@
 import HeroSection from "../components/pages/home/HeroSection";
-import ServiceSection from "../components/pages/home/ServiceSection";
+import ServiceSection from "../components/common/ServiceSection";
 import TestimonialSection from "../components/pages/home/TestimonialSection";
 import Courses from "../components/pages/home/Courses";
 

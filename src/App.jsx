@@ -7,6 +7,7 @@ import {
   BlogPage,
   CoursePage,
   CorporateBookingPage,
+  ConsultingPage,
   Testing,
 } from "./pages";
 
@@ -28,6 +29,7 @@ const App = () => {
             element={<CorporateBookingPage />}
           />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/Consulting" element={<ConsultingPage />} />
           <Route path="/courses" element={<CoursePage />} />
         </Route>
       </Routes>

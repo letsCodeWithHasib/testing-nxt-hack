@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -42,7 +43,8 @@ const Footer = () => {
                 <i className="fab fa-facebook text-2xl"></i>
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/riya-soni-3b41232ba/"
+                target="_blank"
                 className="text-gray-400 hover:text-gray-200 transition"
                 aria-label="Visit our LinkedIn"
               >
@@ -54,6 +56,14 @@ const Footer = () => {
                 aria-label="Visit our Twitter"
               >
                 <i className="fab fa-twitter text-2xl"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/nxthackit?igsh=MWpkNGhwdmxvcTA1bg=="
+                target="_blank"
+                className="text-gray-400 hover:text-gray-200 transition"
+                aria-label="Visit our Twitter"
+              >
+                <i class="fa-brands fa-instagram text-2xl"></i>
               </a>
             </div>
           </div>
