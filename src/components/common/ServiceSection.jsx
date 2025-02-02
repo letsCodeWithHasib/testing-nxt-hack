@@ -72,7 +72,10 @@ const ServicesOverview = () => {
   }, []);
 
   return (
-    <section className="py-10 bg-gray-100" id="services">
+    <section
+      className="py-10 bg-gray-100 px-5 md:px-10 lg:px-[100]"
+      id="services"
+    >
       <div className="container mx-auto text-center">
         <h2 className="text-5xl font-semibold mb-10 font-outfit text-purple-700">
           Our Services

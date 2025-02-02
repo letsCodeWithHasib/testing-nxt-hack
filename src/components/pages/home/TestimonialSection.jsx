@@ -52,14 +52,14 @@ const TestimonialsCarousel = () => {
   ];
 
   return (
-    <section className="p-5 bg-black px-[10%] md:px-[100px]">
+    <section className="p-5 bg-black px-2 lg:px-[100px]">
       <h2 className="text-3xl md:text-5xl text-center font-semibold mb-8 font-outfit text-white">
         Testimonials
       </h2>
-      <div className="relative p-5 flex gap-5 items-center justify-center">
+      <div className="relative p-5 flex gap-2 md:gap-5 items-center justify-center">
         {/* Custom left arrow */}
         <button
-          className="text-2xl text-white p-3 rounded-full bg-gradient-to-tr from-indigo-600 to-pink-600"
+          className="md:text-2xl text-xl  text-white p-2 md:p-3 rounded-full bg-gradient-to-tr from-indigo-600 to-pink-600"
           onClick={() => swiperRef.current.swiper.slidePrev()}
         >
           <MdArrowBack />
@@ -88,7 +88,7 @@ const TestimonialsCarousel = () => {
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index} className="testimonial-slide">
               <div className="bg-purple-300 p-4 md:p-6 rounded-lg shadow-lg">
-                <div className="flex items-center mb-4">
+                <div className="flex flex-col md:flex-row items-center mb-4">
                   <img
                     src={testimonial.image}
                     alt={testimonial.name}
@@ -103,7 +103,7 @@ const TestimonialsCarousel = () => {
                     </p>
                   </div>
                 </div>
-                <p className="text-gray-700 text-sm md:text-base italic">
+                <p className="text-gray-700 text-center text-sm md:text-base italic">
                   "{testimonial.testimonial}"
                 </p>
               </div>
@@ -113,7 +113,7 @@ const TestimonialsCarousel = () => {
 
         {/* Custom right arrow */}
         <button
-          className="text-2xl text-white p-3 rounded-full bg-gradient-to-tr to-indigo-600 from-pink-600"
+          className="md:text-2xl text-xl  text-white p-2 md:p-3 rounded-full bg-gradient-to-tr to-indigo-600 from-pink-600"
           onClick={() => swiperRef.current.swiper.slideNext()}
         >
           <MdArrowForward />
