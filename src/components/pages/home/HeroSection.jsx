@@ -6,7 +6,7 @@ const HeroSection = () => {
   const [isFormVisible, setIsFormVisible] = useState(false);
   return (
     <section
-      className="relative w-full min-h-screen bg-cover bg-center pt-20"
+      className="relative w-screen min-h-screen bg-cover bg-center pt-20 px-[100px]"
       style={{ backgroundImage: "url('/bg-section.jpg')" }}
     >
       <BookDemo

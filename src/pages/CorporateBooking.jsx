@@ -25,10 +25,10 @@ const CorporateBooking = () => {
   };
 
   return (
-    <div className="bg-black mt-[75px] font-outfit">
+    <div className="bg-black mt-[75px] font-outfit px-[100px]">
       {/* Header */}
       <div className="py-12">
-        <div className="container mx-auto text-center text-white">
+        <div className="container text-center text-white">
           <h1 className="text-4xl font-bold">Corporate Trainings</h1>
           <p className="mt-3 text-lg font-poppins">
             At NxtHack It Solutions, we specialize in delivering high-impact

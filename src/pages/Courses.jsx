@@ -18,8 +18,8 @@ const CoursePage = () => {
   };
 
   return (
-    <section>
-      <div className="relative w-screen h-screen mt-[75px]">
+    <section className="w-full">
+      <div className="relative w-full h-screen mt-[75px]">
         {/* Video */}
         <video
           className="absolute w-full h-full object-cover"
@@ -31,19 +31,19 @@ const CoursePage = () => {
         ></video>
 
         {/* Gradient Overlay on Video */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-800 opacity-80"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-800 opacity-70"></div>
 
         {/* Header */}
-        <div className="py-20 relative">
-          <div className="container mx-auto text-center text-white mt-10">
-            <h1 className="text-5xl font-bold ">
+        <div className="py-20 relative px-[100px]">
+          <div className="container mx-auto w-full text-center text-white mt-10">
+            <h1 className="text-5xl font-bold">
               Unlock Your Potential with Our Expert-Led Courses
             </h1>
-            <p className="mt-2 text-2xl font-poppins  text-white">
+            <p className="mt-2 text-2xl font-poppins text-white">
               Enhance Your Skills with Our Specialized Programs for Students,
               Professionals, and Lifelong Learners
             </p>
-            <p className="mt-5 text-xl font-poppins  text-white">
+            <p className="mt-5 text-xl font-poppins text-white">
               At NxtHack IT Solutions, we understand that learning needs differ
               from person to person. Whether you’re a college student looking to
               gain industry-relevant skills, a corporate professional seeking to
@@ -64,8 +64,8 @@ const CoursePage = () => {
         </div>
       </div>
 
-      <section className="py-10 bg-gray-100" id="courses">
-        <div className="container mx-auto text-center">
+      <section className="py-10 bg-gray-100 px-[100px]" id="courses">
+        <div className="container mx-auto text-center w-full">
           <h2 className="text-5xl font-semibold mb-10 font-outfit text-purple-700">
             Our Courses
           </h2>
@@ -74,14 +74,13 @@ const CoursePage = () => {
             world of technology.
           </p>
 
-          {/* Course Cards */}
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid md:grid-cols-3 gap-12 w-full">
             {courses
               .slice(0, showAllCourses ? courses.length : 6)
               .map((course, index) => (
                 <div
                   key={index}
-                  className="course-card bg-white p-6 rounded-lg shadow-lg relative group"
+                  className="course-card bg-white p-6 rounded-lg shadow-lg relative group w-full"
                 >
                   <div className="text-4xl text-purple-700 mb-4">
                     <i className={`${course.icon} text-purple-700`}></i>
@@ -101,7 +100,6 @@ const CoursePage = () => {
                     Book a Demo
                   </button>
 
-                  {/* Arrow Icon on hover */}
                   <div className="absolute opacity-0 group-hover:opacity-100 -rotate-90 p-2 border-purple-700 border rounded-full top-4 right-4 group-hover:rotate-0 transition-transform duration-500">
                     <FaArrowRight className="text-purple-700 text-2xl" />
                   </div>

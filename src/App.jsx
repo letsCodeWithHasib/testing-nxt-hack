@@ -15,7 +15,7 @@ import Unprotected from "./layout/Unprotected";
 
 const App = () => {
   return (
-    <div>
+    <div className="w-screen">
       <Routes>
         <Route path="/Testing" element={<Testing />}></Route>
         <Route path="/" element={<Unprotected />}>

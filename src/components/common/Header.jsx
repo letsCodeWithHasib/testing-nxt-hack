@@ -35,7 +35,7 @@ const Header = () => {
       } transition-all duration-300 fixed top-0 left-0 w-full z-50 bg-[rgb(80,32,79)] py-4`}
     >
       <Contact isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
-      <div className="max-w-screen-xl mx-auto flex justify-between items-center px-6">
+      <div className="px-[100px] mx-auto flex justify-between items-center">
         <div
           className={`text-white text-3xl font-ubuntu font-semibold tracking-wide animate__animated ${
             isScrolled ? "animate__fadeOut" : "animate__fadeIn"
