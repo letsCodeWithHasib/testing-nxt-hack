@@ -1,13 +1,19 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { FiMenu, FiX } from "react-icons/fi";
+import { FiMenu, FiX, FiChevronRight, FiChevronDown } from "react-icons/fi";
 import Contact from "./Contact";
+import { services } from "../../assets/data";
+import ServiceList from "./ServiceList";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesMenuOpen, setIsServicesMenuOpen] = useState(false);
+  const [activeServiceIndex, setActiveServiceIndex] = useState(null);
+
+  const servicesMenuRef = useRef(null);
 
   const handleScroll = () => {
     if (window.scrollY > 50 && window.scrollY > lastScrollY) {
@@ -20,10 +26,31 @@ const Header = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    document.addEventListener("click", handleOutsideClick);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("click", handleOutsideClick);
     };
   }, [lastScrollY]);
+
+  const handleOutsideClick = (event) => {
+    if (
+      servicesMenuRef.current &&
+      !servicesMenuRef.current.contains(event.target)
+    ) {
+      setIsServicesMenuOpen(false);
+      setActiveServiceIndex(null);
+    }
+  };
+
+  const toggleServicesMenu = () => {
+    setIsServicesMenuOpen(!isServicesMenuOpen);
+  };
+
+  const toggleCategory = (index) => {
+    setActiveServiceIndex(activeServiceIndex === index ? null : index);
+  };
 
   return (
     <header
@@ -38,24 +65,35 @@ const Header = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex space-x-6 text-lg text-white">
+        <nav className="hidden items-center lg:flex space-x-6 text-lg text-white">
           <Link to="/home" className="hover:text-gray-300 transition">
             Home
           </Link>
-          <Link
-            to="/corporate-trainings"
-            className="hover:text-gray-300 transition"
-          >
-            Corporate Trainings
-          </Link>
-          <Link to="/services" className="hover:text-gray-300 transition">
-            Services
-          </Link>
+
+          {/* Services Dropdown */}
+          <div className="relative" ref={servicesMenuRef}>
+            <button
+              className="flex items-center space-x-2 hover:text-gray-300 transition"
+              onClick={toggleServicesMenu}
+            >
+              <span>Services</span>
+              <FiChevronDown
+                className={`transform transition-transform ${
+                  isServicesMenuOpen ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+            {isServicesMenuOpen && (
+              <ServiceList
+                activeServiceIndex={activeServiceIndex}
+                services={services}
+                toggleCategory={toggleCategory}
+              />
+            )}
+          </div>
+
           <Link to="/courses" className="hover:text-gray-300 transition">
             Courses
-          </Link>
-          <Link to="/consulting" className="hover:text-gray-300 transition">
-            Consult with Experts
           </Link>
           <button
             onClick={() => setIsModalOpen(true)}
@@ -89,13 +127,6 @@ const Header = () => {
             Home
           </Link>
           <Link
-            to="/corporate-trainings"
-            className="hover:text-gray-300"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Corporate Trainings
-          </Link>
-          <Link
             to="/services"
             className="hover:text-gray-300"
             onClick={() => setIsMenuOpen(false)}
@@ -108,13 +139,6 @@ const Header = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             Courses
-          </Link>
-          <Link
-            to="/consulting"
-            className="hover:text-gray-300"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Consult with Experts
           </Link>
           <button
             onClick={() => {

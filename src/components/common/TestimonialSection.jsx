@@ -12,42 +12,42 @@ const TestimonialsCarousel = () => {
       position: "CEO of Company X",
       testimonial:
         "Nxthack IT Solutions provided excellent training and support. Highly recommended!",
-      image: "https://via.placeholder.com/100",
+      image: "/user.png",
     },
     {
       name: "Jane Smith",
       position: "Project Manager at Company Y",
       testimonial:
         "The team at Nxthack is highly skilled and delivered on time. We saw great results.",
-      image: "https://via.placeholder.com/100",
+      image: "/user.png",
     },
     {
       name: "Mark Wilson",
       position: "CTO of Company Z",
       testimonial:
         "An outstanding experience with Nxthack. Their training and services are top-notch.",
-      image: "https://via.placeholder.com/100",
+      image: "/user.png",
     },
     {
       name: "John Doe",
       position: "CEO of Company X",
       testimonial:
         "Nxthack IT Solutions provided excellent training and support. Highly recommended!",
-      image: "https://via.placeholder.com/1040",
+      image: "/user.png",
     },
     {
       name: "Jane Smith",
       position: "Project Manager at Company Y",
       testimonial:
         "The team at Nxthack is highly skilled and delivered on time. We saw great results.",
-      image: "https://via.placeholder.com/100",
+      image: "/user.png",
     },
     {
       name: "Mark Wilson",
       position: "CTO of Company Z",
       testimonial:
         "An outstanding experience with Nxthack. Their training and services are top-notch.",
-      image: "https://via.placeholder.com/100",
+      image: "/user.png",
     },
   ];
 
@@ -88,12 +88,7 @@ const TestimonialsCarousel = () => {
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index} className="testimonial-slide">
               <div className="bg-purple-300 p-4 md:p-6 rounded-lg shadow-lg">
-                <div className="flex flex-col md:flex-row items-center mb-4">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-16 h-16 rounded-full mr-4"
-                  />
+                <div className="flex flex-col md:flex-row items-start mb-4 justify-between">
                   <div>
                     <p className="font-semibold text-lg md:text-xl">
                       {testimonial.name}
@@ -102,8 +97,13 @@ const TestimonialsCarousel = () => {
                       {testimonial.position}
                     </p>
                   </div>
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-16 rounded-full mr-4"
+                  />
                 </div>
-                <p className="text-gray-700 text-center text-sm md:text-base italic">
+                <p className="text-gray-700 text-sm md:text-base italic">
                   "{testimonial.testimonial}"
                 </p>
               </div>

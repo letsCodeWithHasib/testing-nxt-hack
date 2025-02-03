@@ -1,3 +1,7 @@
+import nasscom from "./Nasscom.jpeg";
+import christ from "./christ-college.jpeg";
+import its from "./its-college.jpeg";
+
 export const popularCourses = [
   {
     title: "Web Development",
@@ -171,36 +175,66 @@ export const services = [
     title: "Corporate Training",
     description:
       "Custom training solutions for businesses to upskill teams with the latest technologies like Angular, Django, and ASP.NET Core.",
-    icon: "fas fa-briefcase", // Font Awesome icon
+    icon: "fas fa-briefcase",
+    link: "corporate-trainings",
   },
   {
-    title: "Live online classes",
+    title: "Live online/offline classes",
     description:
       "NxtHack provides online live interactive sessions to help individuals gain expertise in various technologies and development practices.",
-    icon: "fas fa-laptop-code", // Font Awesome icon
+    icon: "fas fa-laptop-code",
+    link: "",
   },
   {
     title: "Consulting",
     description:
       "Expert consulting services to help organizations improve their development processes and optimize workflows.",
-    icon: "fas fa-chalkboard-teacher", // Font Awesome icon
+    icon: "fas fa-chalkboard-teacher",
+    link: "consulting",
   },
   {
     title: "Work Support on Requirement",
     description:
       "Tailored work support services based on your specific project needs. We provide flexible and scalable solutions, from code reviews to full team assistance.",
-    icon: "fas fa-headset", // Font Awesome icon
+    icon: "fas fa-headset",
+    link: "work-support",
   },
   {
     title: "College Training",
     description:
       "Training programs designed for colleges to help students gain real-world skills in web development, data science, and more.",
-    icon: "fas fa-university", // Font Awesome icon
+    icon: "fas fa-university",
+    link: "college-trainings",
   },
   {
     title: "Project Development Assistance",
     description:
       "We assist you in developing your projects from start to finish, including planning, implementation, and support for web, mobile, and software projects.",
-    icon: "fas fa-cogs", // Font Awesome icon
+    icon: "fas fa-cogs",
+    link: "development-assistance",
+  },
+];
+
+export const previousWork = [
+  {
+    title: "Data Science & Artificial Intelligence",
+    year: "2024",
+    description:
+      "Covered essential tools and platforms for Data Science and Machine Learning, including Python libraries (e.g., Pandas, NumPy, Matplotlib, Scikit-learn), frameworks like TensorFlow and PyTorch, and cloud platforms such as AWS SageMaker and Azure Machine Learning. The curriculum also included data processing, model building, evaluation, and deployment.",
+    image: nasscom,
+  },
+  {
+    title: "Crypto Currency & Data Science",
+    year: "2024",
+    description:
+      "Covered the intersection of Cryptocurrency and Data Science, including blockchain fundamentals, cryptocurrency analysis, data collection and processing for blockchain data, predictive modeling for crypto markets, and using tools like Python, Pandas, and machine learning techniques to analyze and forecast cryptocurrency trends",
+    image: christ,
+  },
+  {
+    title: "PowerBi & Tableu",
+    year: "2024",
+    description:
+      "Covered data visualization and business intelligence using Power BI and Tableau, including data import, transformation, and visualization techniques. Students learned how to create interactive dashboards, reports, and analytics to gain insights from large datasets and make data-driven decisions.",
+    image: its,
   },
 ];

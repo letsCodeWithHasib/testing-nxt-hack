@@ -1,60 +1,18 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaArrowRight } from "react-icons/fa"; // Importing arrow icon from react-icons
 import { Link } from "react-router-dom";
-
-const services = [
-  {
-    title: "Corporate Training",
-    description:
-      "Custom training solutions for businesses to upskill teams with the latest technologies like Angular, Django, and ASP.NET Core.",
-    icon: "fas fa-briefcase", // Font Awesome icon
-    link: "/corporate-trainings",
-  },
-  {
-    title: "Live online/offline classes",
-    description:
-      "NxtHack provides online live interactive sessions to help individuals gain expertise in various technologies and development practices.",
-    icon: "fas fa-laptop-code", // Font Awesome icon
-    link: "/courses",
-  },
-  {
-    title: "Consulting",
-    description:
-      "Expert consulting services to help organizations improve their development processes and optimize workflows.",
-    icon: "fas fa-chalkboard-teacher", // Font Awesome icon
-    link: "/",
-  },
-  {
-    title: "Work Support on Requirement",
-    description:
-      "Tailored work support services based on your specific project needs. We provide flexible and scalable solutions, from code reviews to full team assistance.",
-    icon: "fas fa-headset", // Font Awesome icon
-    link: "/",
-  },
-  {
-    title: "College Training",
-    description:
-      "Training programs designed for colleges to help students gain real-world skills in web development, data science, and more.",
-    icon: "fas fa-university", // Font Awesome icon
-    link: "/",
-  },
-  {
-    title: "Project Development Assistance",
-    description:
-      "We assist you in developing your projects from start to finish, including planning, implementation, and support for web, mobile, and software projects.",
-    icon: "fas fa-cogs", // Font Awesome icon
-    link: "/",
-  },
-];
+import Tooltip from "./Tooltip"; // Assuming Tooltip is a separate component
+import { services } from "../../assets/data";
 
 const ServicesOverview = () => {
-  const serviceRefs = useRef([]); // To keep track of service card elements
+  const serviceRefs = useRef([]);
+  const [hoveredService, setHoveredService] = useState(null); // State to track hovered service
 
   // This function will trigger animations when elements are in view
   const handleIntersection = (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("animate-in"); // Add the class to trigger animation
+        entry.target.classList.add("animate-in");
         observer.unobserve(entry.target); // Stop observing once animated
       }
     });
@@ -65,7 +23,6 @@ const ServicesOverview = () => {
       threshold: 0.5, // Trigger when 50% of the element is visible
     });
 
-    // Observe each service card
     serviceRefs.current.forEach((card) => observer.observe(card));
 
     return () => observer.disconnect(); // Clean up observer on component unmount
@@ -82,10 +39,12 @@ const ServicesOverview = () => {
         </h2>
         <div className="grid md:grid-cols-3 gap-12">
           {services.map((service, index) => (
-            <Link to={service.link} key={index}>
+            <Link to={`/services/${service.link}`} key={index}>
               <div
-                ref={(el) => (serviceRefs.current[index] = el)} // Attach refs to cards
+                ref={(el) => (serviceRefs.current[index] = el)}
                 className="service-card bg-white p-6 rounded-lg shadow-lg transition-all transform relative group"
+                onMouseEnter={() => setHoveredService(service.title)}
+                onMouseLeave={() => setHoveredService(null)}
               >
                 {/* Service Icon */}
                 <div className="text-4xl text-purple-700 mb-4">
@@ -102,8 +61,15 @@ const ServicesOverview = () => {
                   {service.description}
                 </p>
 
+                {/* Tooltip Message on Hover */}
+                {hoveredService === service.title && (
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-lg opacity-90">
+                    Click to explore our {service.title}
+                  </div>
+                )}
+
                 {/* Arrow Icon */}
-                <div className="absolute  opacity-0 group-hover:opacity-100 -rotate-90 p-2 border-purple-700 border rounded-full top-4 right-4 group-hover:rotate-0 transition-transform duration-500">
+                <div className="absolute opacity-0 group-hover:opacity-100 -rotate-90 p-2 border-purple-700 border rounded-full top-4 right-4 group-hover:rotate-0 transition-transform duration-500">
                   <FaArrowRight className="text-purple-700 text-2xl" />
                 </div>
               </div>

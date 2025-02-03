@@ -1,4 +1,5 @@
 import { useState } from "react";
+import TestimonialSection from "../components/common/TestimonialSection";
 import {
   FaUser,
   FaEnvelope,
@@ -123,6 +124,17 @@ const ConsultingPage = () => {
         </div>
       )}
 
+      <section className="py-10 bg-white px-[100px] mb-10" id="course-outcomes">
+        <h2 className="text-5xl font-semibold mb-10 font-outfit text-purple-700">
+          Course Outcomes
+        </h2>
+        <ul className="list-disc pl-8 text-xl text-gray-600">
+          <li>Master key programming concepts and languages</li>
+          <li>Develop real-world applications</li>
+          <li>Gain industry-recognized certification</li>
+        </ul>
+      </section>
+
       <div className="mt-16 max-w-3xl mx-auto">
         <h3 className="text-2xl font-bold text-center">
           Frequently Asked Questions
@@ -146,6 +158,25 @@ const ConsultingPage = () => {
           </div>
         </div>
       </div>
+      <TestimonialSection />
+
+      <section className="py-10 bg-gray-100 px-[100px]" id="contact">
+        <h2 className="text-5xl font-semibold mb-10 font-outfit text-purple-700">
+          Get in Touch
+        </h2>
+        <p className="text-xl text-gray-600 mb-6">
+          Feel free to reach out to us if you have any questions or need further
+          information.
+        </p>
+        <div className="flex space-x-6">
+          <div className="text-lg text-gray-700">
+            <strong>Email:</strong> support@nxthack.com
+          </div>
+          <div className="text-lg text-gray-700">
+            <strong>Phone:</strong> +91 123 456 7890
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

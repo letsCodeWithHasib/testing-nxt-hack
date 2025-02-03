@@ -31,10 +31,10 @@ const CoursePage = () => {
         ></video>
 
         {/* Gradient Overlay on Video */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-800 opacity-70"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-800 opacity-80"></div>
 
         {/* Header */}
-        <div className="py-20 relative px-5 md:px-[100px]">
+        <div className="py-20 relative p76t X982Y3QF x-5 md:px-[100px]">
           <div className="container mx-auto w-full text-center text-white mt-10">
             <h1 className="text-3xl sm:text-5xl font-bold">
               Unlock Your Potential with Our Expert-Led Courses
@@ -187,6 +187,8 @@ const CoursePage = () => {
           </div>
         )}
       </section>
+
+      {/* <Sr /> */}
     </section>
   );
 };
