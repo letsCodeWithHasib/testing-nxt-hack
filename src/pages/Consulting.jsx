@@ -148,7 +148,8 @@ const ConsultingPage = () => {
               Who can book a free consultation?
             </h4>
             <p className="text-gray-600">
-              Anyone looking for career guidance in the IT industry.
+              Anyone struggling to select his domain and looking for career
+              guidance in the IT industry.
             </p>
           </div>
           <div className="bg-white p-4 shadow-lg rounded-lg">
@@ -156,8 +157,40 @@ const ConsultingPage = () => {
               How long does the session last?
             </h4>
             <p className="text-gray-600">
-              Each session lasts for about 30 minutes.
+              Each session lasts for about 30-45 minutes. Sometimes, It can go
+              beyond this too.
             </p>
+          </div>
+          <div className="bg-white p-4 shadow-lg rounded-lg">
+            <h4 className="text-lg font-semibold">
+              What cost I need to pay for this session ?
+            </h4>
+            <p className="text-gray-600">
+              This session is completely free for you.
+            </p>
+          </div>
+          <div className="bg-white p-4 shadow-lg rounded-lg">
+            <h4 className="text-lg font-semibold">
+              Why to choose Nxthack IT solutions?
+            </h4>
+            <ol>
+              <li>
+                <strong>1. Industry Experts</strong> : Our trainers are seasoned
+                professionals with years of hands-on experience in their
+                respective fields. They bring real-world insights to the
+                training sessions.
+              </li>
+              <li>
+                <strong>2. Customized Programs</strong> : Our trainers are We
+                tailor our training programs to meet the specific needs of your
+                organization, ensuring maximum relevance and impact.
+              </li>
+              <li>
+                <strong>3. Hands-On Learning</strong> : Our trainers are Our
+                training sessions are highly interactive, with a focus on
+                practical, hands-on learning to ensure immediate applicability.
+              </li>
+            </ol>
           </div>
         </div>
       </div>

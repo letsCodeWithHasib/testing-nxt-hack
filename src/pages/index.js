@@ -6,6 +6,7 @@ import CorporateBooking from "./CorporateBooking";
 import Consulting from "./Consulting";
 import WorkSupport from "./WorkSupport";
 import ProjectDevelopmentAssistance from "./ProjectDevelopmentAssistance";
+import NotFound from "./NotFound";
 
 export {
   Home as HomePage,
@@ -16,4 +17,5 @@ export {
   CollegeTrainings as CollegeTrainingsPage,
   WorkSupport as WorkSupportPage,
   ProjectDevelopmentAssistance as ProjectDevelopmentAssistancePage,
+  NotFound as NotFoundPage,
 };

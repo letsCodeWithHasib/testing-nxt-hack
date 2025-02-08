@@ -9,6 +9,7 @@ import {
   ConsultingPage,
   WorkSupportPage,
   ProjectDevelopmentAssistancePage,
+  NotFoundPage,
 } from "./pages";
 
 import Testing from "./pages/Testing";
@@ -40,6 +41,7 @@ const App = () => {
             path="/services/project-development-assistance"
             element={<ProjectDevelopmentAssistancePage />}
           />
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
     </div>

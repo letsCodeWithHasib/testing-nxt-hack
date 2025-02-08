@@ -20,6 +20,7 @@ const PreviousWork = () => {
               className="w-full h-60 object-cover"
             />
             <div className="p-4">
+              <h1 className="text-2xl font-bold">{work.name}</h1>
               <h2 className="text-xl font-semibold">{work.title}</h2>
               <p className="text-gray-500">{work.year}</p>
               <p className="text-gray-700 mt-2">{work.description}</p>

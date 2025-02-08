@@ -31,7 +31,7 @@ const CoursePage = () => {
         ></video>
 
         {/* Gradient Overlay on Video */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-800 opacity-80"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-800 opacity-90"></div>
 
         {/* Header */}
         <div className="py-20 relative p76t X982Y3QF x-5 md:px-[100px]">

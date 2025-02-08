@@ -193,19 +193,21 @@ export const services = [
     link: "consulting",
   },
   {
-    title: "Work Support on Requirement",
-    description:
-      "Tailored work support services based on your specific project needs. We provide flexible and scalable solutions, from code reviews to full team assistance.",
-    icon: "fas fa-headset",
-    link: "work-support",
-  },
-  {
     title: "College Training",
     description:
       "Training programs designed for colleges to help students gain real-world skills in web development, data science, and more.",
     icon: "fas fa-university",
     link: "college-trainings",
   },
+
+  {
+    title: "Work Support on Requirement",
+    description:
+      "Tailored work support services based on your specific project needs. We provide flexible and scalable solutions, from code reviews to full team assistance.",
+    icon: "fas fa-headset",
+    link: "work-support",
+  },
+
   {
     title: "Project Development Assistance",
     description:
@@ -222,6 +224,7 @@ export const previousWork = [
     description:
       "Covered essential tools and platforms for Data Science and Machine Learning, including Python libraries (e.g., Pandas, NumPy, Matplotlib, Scikit-learn), frameworks like TensorFlow and PyTorch, and cloud platforms such as AWS SageMaker and Azure Machine Learning. The curriculum also included data processing, model building, evaluation, and deployment.",
     image: nasscom,
+    name: "Nasscom",
   },
   {
     title: "Crypto Currency & Data Science",
@@ -229,6 +232,7 @@ export const previousWork = [
     description:
       "Covered the intersection of Cryptocurrency and Data Science, including blockchain fundamentals, cryptocurrency analysis, data collection and processing for blockchain data, predictive modeling for crypto markets, and using tools like Python, Pandas, and machine learning techniques to analyze and forecast cryptocurrency trends",
     image: christ,
+    name: "christ",
   },
   {
     title: "PowerBi & Tableu",
@@ -236,5 +240,6 @@ export const previousWork = [
     description:
       "Covered data visualization and business intelligence using Power BI and Tableau, including data import, transformation, and visualization techniques. Students learned how to create interactive dashboards, reports, and analytics to gain insights from large datasets and make data-driven decisions.",
     image: its,
+    name: "ITS",
   },
 ];
