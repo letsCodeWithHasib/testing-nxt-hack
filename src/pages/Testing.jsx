@@ -10,7 +10,6 @@ import {
   FaUsers,
   FaBriefcase,
 } from "react-icons/fa";
-import { IoIosArrowForward } from "react-icons/io";
 
 const steps = [
   {
@@ -62,27 +61,38 @@ const steps = [
 
 const HowWeWork = () => {
   return (
-    <div className="max-w-5xl mx-auto py-12 px-6 text-center">
-      <h2 className="text-3xl font-bold mb-8">How We Work</h2>
-      <div className="flex items-center justify-center flex-wrap relative">
+    <div className="max-w-7xl mx-auto py-16 px-6 text-center bg-gray-50">
+      <h2 className="text-4xl font-bold mb-12 text-gray-800">How We Work</h2>
+      <div className="relative w-full flex flex-col items-center">
+        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-yellow-400 to-blue-500 h-full"></div>
         {steps.map((step, index) => (
           <div
             key={index}
-            className="relative flex flex-col items-center w-32 m-4"
+            className={`flex items-center w-full max-w-2xl mb-10 ${
+              index % 2 === 0 ? "justify-start" : "justify-end"
+            }`}
           >
-            <div
-              className={`w-16 h-16 flex items-center justify-center rounded-full text-white font-bold text-xl shadow-lg ${
-                index % 2 === 0 ? "bg-yellow-500" : "bg-blue-500"
-              }`}
-            >
-              {index + 1}
-            </div>
-            <div className="mt-4 bg-white p-4 rounded-lg shadow-md">
-              <h3 className="font-semibold">{step.title}</h3>
-              <p className="text-gray-600 text-sm">{step.description}</p>
-            </div>
-            {index < steps.length - 1 && (
-              <IoIosArrowForward className="text-gray-500 text-2xl mt-4" />
+            {index % 2 === 0 && (
+              <div className="flex items-center space-x-4">
+                <div className="text-4xl text-yellow-500">{step.icon}</div>
+                <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 w-80 text-left">
+                  <h3 className="font-semibold text-lg text-gray-800 mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm">{step.description}</p>
+                </div>
+              </div>
+            )}
+            {index % 2 !== 0 && (
+              <div className="flex items-center space-x-4">
+                <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 w-80 text-left">
+                  <h3 className="font-semibold text-lg text-gray-800 mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm">{step.description}</p>
+                </div>
+                <div className="text-4xl text-blue-500">{step.icon}</div>
+              </div>
             )}
           </div>
         ))}

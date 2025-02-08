@@ -44,7 +44,7 @@ const Footer = () => {
             <div className="flex gap-4 mt-6">
               {/* Social Media Icons */}
               <a
-                href="https://www.facebook.com/"
+                href="https://www.facebook.com/nxthackit"
                 className="text-gray-400 hover:text-gray-200 transition p-3 border border-white rounded-full"
                 aria-label="Visit our Facebook"
               >
@@ -60,7 +60,7 @@ const Footer = () => {
                 <FaLinkedin className="text-xl" aria-hidden="true" />
               </a>
               <a
-                href="https://twitter.com/"
+                href="https://twitter.com/nxthackit"
                 className="text-gray-400 hover:text-gray-200 transition border border-white p-3 rounded-full"
                 aria-label="Visit our Twitter"
               >
@@ -116,7 +116,7 @@ const Footer = () => {
               East Delhi-110096, Delhi, India
             </p>
             <p className="mt-2 flex items-center gap-2">
-              <FaPhone className="" />
+              <FaPhone className="rotate-90" />
               <a
                 href="tel:+919205110948"
                 className="text-blue-100 hover:underline"
