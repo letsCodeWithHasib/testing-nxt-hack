@@ -36,34 +36,36 @@ const Footer = () => {
             <div className="flex gap-4 mt-6">
               {/* Social Media Icons */}
               <a
-                href="#"
+                href="https://www.facebook.com/"
                 className="text-gray-400 hover:text-gray-200 transition"
                 aria-label="Visit our Facebook"
               >
-                <FaFacebook className="text-3xl" />
+                <FaFacebook className="text-3xl" aria-hidden="true" />
               </a>
               <a
                 href="https://www.linkedin.com/in/riya-soni-3b41232ba/"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-gray-200 transition"
                 aria-label="Visit our LinkedIn"
               >
-                <FaLinkedin className="text-3xl" />
+                <FaLinkedin className="text-3xl" aria-hidden="true" />
               </a>
               <a
-                href="#"
+                href="https://twitter.com/"
                 className="text-gray-400 hover:text-gray-200 transition"
                 aria-label="Visit our Twitter"
               >
-                <FaTwitter className="text-3xl" />
+                <FaTwitter className="text-3xl" aria-hidden="true" />
               </a>
               <a
                 href="https://www.instagram.com/nxthackit?igsh=MWpkNGhwdmxvcTA1bg=="
                 target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-gray-200 transition"
                 aria-label="Visit our Instagram"
               >
-                <FaInstagram className="text-3xl" />
+                <FaInstagram className="text-3xl" aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -94,16 +96,6 @@ const Footer = () => {
                   Data Science with Python
                 </a>
               </li>
-              <li>
-                <a href="#cloud" className="hover:text-white transition">
-                  Cloud Computing
-                </a>
-              </li>
-              <li>
-                <a href="#data-science" className="hover:text-white transition">
-                  Data Science with Python
-                </a>
-              </li>
             </ul>
           </div>
 
@@ -111,12 +103,50 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold text-white">Contact Us</h3>
             <p className="mt-4">
-              Address: D-2, G/F, Kh No 265, Plot No 180-F, New Ashok Nagar,East
+              Address: D-2, G/F, Kh No 265, Plot No 180-F, New Ashok Nagar, East
               Delhi, East Delhi-110096, Delhi, India
               <br />
-              Phone: +91 98765 43210
+              Phone:
+              <a
+                href="tel:+919205110948"
+                className="text-blue-100 hover:underline"
+              >
+                {" "}
+                +91 9205110948
+              </a>
+              ,
+              <a
+                href="tel:+919205894280"
+                className="text-blue-100 hover:underline"
+              >
+                {" "}
+                +91 9205894280
+              </a>
               <br />
-              Email: info@nxthackitsolutions.com
+              WhatsApp:
+              <a
+                href="https://wa.me/919205110948"
+                className="text-blue-100 hover:underline"
+              >
+                {" "}
+                +91 9205110948
+              </a>
+              ,
+              <a
+                href="https://wa.me/919205894280"
+                className="text-blue-100 hover:underline"
+              >
+                {" "}
+                +91 9205894280
+              </a>
+              <br />
+              Email:{" "}
+              <a
+                href="mailto:info@nxthackitsolutions.com"
+                className="text-blue-100 hover:underline"
+              >
+                info@nxthackitsolutions.com
+              </a>
             </p>
             <a
               href="#contact"
@@ -125,59 +155,14 @@ const Footer = () => {
               Get in Touch
             </a>
           </div>
-
-          {/* contact form */}
-          {/* <div>
-            <h3 className="text-xl font-semibold text-white">Get in Touch</h3>
-            <form
-              onSubmit={handleSubmit}
-              className="mt-4 bg-gray-800 p-6 rounded-lg shadow-lg"
-            >
-              <div className="mb-4">
-                <input
-                  placeholder="Name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  className="w-full p-2 rounded-lg bg-gray-700 text-white focus:ring-2 focus:ring-blue-500"
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <input
-                  type="Email"
-                  placeholder="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  className="w-full p-2 rounded-lg bg-gray-700 text-white focus:ring-2 focus:ring-blue-500"
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <textarea
-                  placeholder="Type your message here"
-                  name="message"
-                  rows="4"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  className="w-full p-2 rounded-lg bg-gray-700 text-white focus:ring-2 focus:ring-blue-500"
-                  required
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-500 transition"
-              >
-                Submit
-              </button>
-            </form>
-          </div> */}
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-4">
           <div className="container mx-auto text-center">
-            <p>&copy; 2025 Nxthack IT Solutions LLP. All rights reserved.</p>
+            <p>
+              &copy; {new Date().getFullYear()} Nxthack IT Solutions LLP. All
+              rights reserved.
+            </p>
           </div>
         </div>
       </div>
