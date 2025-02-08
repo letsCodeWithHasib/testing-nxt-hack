@@ -1,5 +1,13 @@
 import { useState } from "react";
-import { FaTwitter, FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
+import {
+  FaTwitter,
+  FaLinkedin,
+  FaFacebook,
+  FaInstagram,
+  FaMapMarkerAlt,
+  FaPhone,
+  FaEnvelope,
+} from "react-icons/fa";
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -37,35 +45,35 @@ const Footer = () => {
               {/* Social Media Icons */}
               <a
                 href="https://www.facebook.com/"
-                className="text-gray-400 hover:text-gray-200 transition"
+                className="text-gray-400 hover:text-gray-200 transition p-3 border border-white rounded-full"
                 aria-label="Visit our Facebook"
               >
-                <FaFacebook className="text-3xl" aria-hidden="true" />
+                <FaFacebook className="text-xl" aria-hidden="true" />
               </a>
               <a
                 href="https://www.linkedin.com/in/riya-soni-3b41232ba/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-gray-200 transition"
+                className="text-gray-400 hover:text-gray-200 transition border border-white p-3 rounded-full"
                 aria-label="Visit our LinkedIn"
               >
-                <FaLinkedin className="text-3xl" aria-hidden="true" />
+                <FaLinkedin className="text-xl" aria-hidden="true" />
               </a>
               <a
                 href="https://twitter.com/"
-                className="text-gray-400 hover:text-gray-200 transition"
+                className="text-gray-400 hover:text-gray-200 transition border border-white p-3 rounded-full"
                 aria-label="Visit our Twitter"
               >
-                <FaTwitter className="text-3xl" aria-hidden="true" />
+                <FaTwitter className="text-xl" aria-hidden="true" />
               </a>
               <a
                 href="https://www.instagram.com/nxthackit?igsh=MWpkNGhwdmxvcTA1bg=="
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-gray-200 transition"
+                className="text-gray-400 hover:text-gray-200 transition border border-white p-3 rounded-full"
                 aria-label="Visit our Instagram"
               >
-                <FaInstagram className="text-3xl" aria-hidden="true" />
+                <FaInstagram className="text-xl" aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -86,7 +94,7 @@ const Footer = () => {
                   AI & Machine Learning
                 </a>
               </li>
-              <li>
+              <li className="">
                 <a href="#cloud" className="hover:text-white transition">
                   Cloud Computing
                 </a>
@@ -102,16 +110,17 @@ const Footer = () => {
           {/* Contact Information */}
           <div>
             <h3 className="text-xl font-semibold text-white">Contact Us</h3>
-            <p className="mt-4">
-              Address: D-2, G/F, Kh No 265, Plot No 180-F, New Ashok Nagar, East
-              Delhi, East Delhi-110096, Delhi, India
-              <br />
-              Phone:
+            <p className="mt-4 flex gap-3 items-start">
+              <FaMapMarkerAlt className="text-2xl" />
+              D-2, G/F, Kh No 265, Plot No 180-F, New Ashok Nagar, East Delhi,
+              East Delhi-110096, Delhi, India
+            </p>
+            <p className="mt-2 flex items-center gap-2">
+              <FaPhone className="" />
               <a
                 href="tel:+919205110948"
                 className="text-blue-100 hover:underline"
               >
-                {" "}
                 +91 9205110948
               </a>
               ,
@@ -119,28 +128,11 @@ const Footer = () => {
                 href="tel:+919205894280"
                 className="text-blue-100 hover:underline"
               >
-                {" "}
                 +91 9205894280
               </a>
-              <br />
-              WhatsApp:
-              <a
-                href="https://wa.me/919205110948"
-                className="text-blue-100 hover:underline"
-              >
-                {" "}
-                +91 9205110948
-              </a>
-              ,
-              <a
-                href="https://wa.me/919205894280"
-                className="text-blue-100 hover:underline"
-              >
-                {" "}
-                +91 9205894280
-              </a>
-              <br />
-              Email:{" "}
+            </p>
+            <p className="mt-2 flex items-center gap-2">
+              <FaEnvelope />
               <a
                 href="mailto:info@nxthackitsolutions.com"
                 className="text-blue-100 hover:underline"
@@ -157,12 +149,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-8 pt-4">
+        <div className="border-t border-gray-400 mt-8 pt-4">
           <div className="container mx-auto text-center">
-            <p>
-              &copy; {new Date().getFullYear()} Nxthack IT Solutions LLP. All
-              rights reserved.
-            </p>
+            <p>&copy;2023 Nxthack IT Solutions LLP. All rights reserved.</p>
           </div>
         </div>
       </div>
