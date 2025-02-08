@@ -2,12 +2,13 @@ import { Routes, Route, Navigate } from "react-router-dom";
 //pages
 import {
   HomePage,
-  AboutPage,
+  CollegeTrainingsPage,
   ServicePage,
   CoursePage,
   CorporateBookingPage,
   ConsultingPage,
-  CollegeTrainingsPage,
+  WorkSupportPage,
+  ProjectDevelopmentAssistancePage,
 } from "./pages";
 
 import Testing from "./pages/Testing";
@@ -23,7 +24,6 @@ const App = () => {
         <Route path="/" element={<Unprotected />}>
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
           <Route path="/services" element={<ServicePage />} />
           <Route
             path="/services/corporate-trainings"
@@ -34,7 +34,12 @@ const App = () => {
             element={<CollegeTrainingsPage />}
           />
           <Route path="/services/consulting" element={<ConsultingPage />} />
-          <Route path="/courses" element={<CoursePage />} />
+          <Route path="/services/courses" element={<CoursePage />} />
+          <Route path="/services/work-support" element={<WorkSupportPage />} />
+          <Route
+            path="/services/project-development-assistance"
+            element={<ProjectDevelopmentAssistancePage />}
+          />
         </Route>
       </Routes>
     </div>

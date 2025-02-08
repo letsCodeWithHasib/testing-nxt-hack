@@ -27,7 +27,7 @@ const ConsultingPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-8 mt-[85px] px-[100px]">
+    <div className="min-h-screen bg-gray-100 py-8 mt-[85px]">
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="text-4xl font-bold text-blue-600 flex justify-center items-center gap-2">
           <FaCalendarCheck /> Free Career Consultation
@@ -38,7 +38,7 @@ const ConsultingPage = () => {
         </p>
       </div>
 
-      <div className="mt-12 grid md:grid-cols-2 gap-6">
+      <div className="mt-12 grid md:grid-cols-2 gap-6 px-5 md:px-[100px]">
         <div className="bg-white p-6 shadow-lg rounded-lg text-center">
           <h3 className="text-xl font-semibold flex justify-center items-center gap-2">
             <FaUser /> Personalized Guidance
@@ -57,7 +57,7 @@ const ConsultingPage = () => {
         </div>
       </div>
 
-      <div className="mt-10 text-center">
+      <div className="mt-10 text-center px-5 md:px-[100px]">
         <button
           onClick={() => setIsOpen(true)}
           className="bg-blue-600 text-white px-6 py-3 text-lg font-semibold rounded-lg flex justify-center items-center gap-2 mx-auto"
@@ -124,7 +124,10 @@ const ConsultingPage = () => {
         </div>
       )}
 
-      <section className="py-10 bg-white px-[100px] mb-10" id="course-outcomes">
+      <section
+        className="py-10 bg-white mx-[100px] px-[100px] mt-10"
+        id="course-outcomes"
+      >
         <h2 className="text-5xl font-semibold mb-10 font-outfit text-purple-700">
           Course Outcomes
         </h2>
@@ -135,7 +138,7 @@ const ConsultingPage = () => {
         </ul>
       </section>
 
-      <div className="mt-16 max-w-3xl mx-auto">
+      <div className="mt-16 max-w-3xl mx-auto mb-10">
         <h3 className="text-2xl font-bold text-center">
           Frequently Asked Questions
         </h3>
@@ -158,9 +161,10 @@ const ConsultingPage = () => {
           </div>
         </div>
       </div>
+
       <TestimonialSection />
 
-      <section className="py-10 bg-gray-100 px-[100px]" id="contact">
+      <section className="py-10 bg-gray-100 px-[100px] mx-[100px]" id="contact">
         <h2 className="text-5xl font-semibold mb-10 font-outfit text-purple-700">
           Get in Touch
         </h2>
@@ -170,10 +174,10 @@ const ConsultingPage = () => {
         </p>
         <div className="flex space-x-6">
           <div className="text-lg text-gray-700">
-            <strong>Email:</strong> support@nxthack.com
+            <strong>Email:</strong> info@nxthackitsolutions.com
           </div>
           <div className="text-lg text-gray-700">
-            <strong>Phone:</strong> +91 123 456 7890
+            <strong>Phone:</strong> +91 9205110948
           </div>
         </div>
       </section>

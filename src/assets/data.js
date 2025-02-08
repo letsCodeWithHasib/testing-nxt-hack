@@ -183,7 +183,7 @@ export const services = [
     description:
       "NxtHack provides online live interactive sessions to help individuals gain expertise in various technologies and development practices.",
     icon: "fas fa-laptop-code",
-    link: "",
+    link: "courses",
   },
   {
     title: "Consulting",
@@ -211,7 +211,7 @@ export const services = [
     description:
       "We assist you in developing your projects from start to finish, including planning, implementation, and support for web, mobile, and software projects.",
     icon: "fas fa-cogs",
-    link: "development-assistance",
+    link: "project-development-assistance",
   },
 ];
 

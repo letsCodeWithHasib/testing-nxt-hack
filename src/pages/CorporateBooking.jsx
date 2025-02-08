@@ -19,7 +19,6 @@ const CorporateBooking = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here (e.g., API call, email service)
     console.log(formData);
     alert("Your booking request has been submitted!");
   };
@@ -45,6 +44,80 @@ const CorporateBooking = () => {
           <div className="absolute w-96 h-96 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full blur-3xl opacity-40 -bottom-10 -right-16 hidden lg:block"></div>
         </div>
       </div>
+
+      {/* Why Choose Us Section */}
+      <section className="py-12 text-white">
+        <div className="container mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+            Why Choose NxtHack It Solutions?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold mb-3">Industry Experts</h3>
+              <p>
+                Our trainers are seasoned professionals with years of hands-on
+                experience in their respective fields. They bring real-world
+                insights to the training sessions.
+              </p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold mb-3">
+                Customized Programs
+              </h3>
+              <p>
+                We tailor our training programs to meet the specific needs of
+                your organization, ensuring maximum relevance and impact.
+              </p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold mb-3">Hands-On Learning</h3>
+              <p>
+                Our training sessions are highly interactive, with a focus on
+                practical, hands-on learning to ensure immediate applicability.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Process Section */}
+      <section className="py-12 text-white">
+        <div className="container mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+            Our Process
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold mb-3">1. Consultation</h3>
+              <p>
+                We start with a detailed consultation to understand your
+                organization's needs and goals.
+              </p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold mb-3">2. Customization</h3>
+              <p>
+                Based on the consultation, we design a customized training
+                program tailored to your requirements.
+              </p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold mb-3">3. Delivery</h3>
+              <p>
+                Our expert trainers deliver the training sessions, focusing on
+                practical, real-world applications.
+              </p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold mb-3">4. Evaluation</h3>
+              <p>
+                We evaluate the effectiveness of the training and provide
+                post-training support to ensure continuous improvement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Booking Form Section */}
       <section className="pb-10">
