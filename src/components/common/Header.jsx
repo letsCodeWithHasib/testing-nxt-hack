@@ -69,6 +69,9 @@ const Header = () => {
           <Link to="/home" className="hover:text-gray-300 transition">
             Home
           </Link>
+          <Link to="/about-us" className="hover:text-gray-300 transition">
+            About Us
+          </Link>
 
           {/* Services Dropdown */}
           <div className="relative" ref={servicesMenuRef}>
@@ -125,6 +128,13 @@ const Header = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             Home
+          </Link>
+          <Link
+            to="/about-us"
+            className="hover:text-gray-300"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            About Us
           </Link>
           <Link
             to="/services"
