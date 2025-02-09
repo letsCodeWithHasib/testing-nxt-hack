@@ -118,17 +118,17 @@ const Footer = () => {
             <p className="mt-2 flex items-center gap-2">
               <FaPhone className="rotate-90" />
               <a
-                href="tel:+919205110948"
-                className="text-blue-100 hover:underline"
-              >
-                +91 9205110948
-              </a>
-              ,
-              <a
                 href="tel:+919205894280"
                 className="text-blue-100 hover:underline"
               >
                 +91 9205894280
+              </a>
+              ,
+              <a
+                href="tel:+919205110948"
+                className="text-blue-100 hover:underline"
+              >
+                +91 9205110948
               </a>
             </p>
             <p className="mt-2 flex items-center gap-2">

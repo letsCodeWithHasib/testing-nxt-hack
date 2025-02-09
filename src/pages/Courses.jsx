@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { courses } from "../assets/data";
 import bgVideo from "../assets/first-course-hero-bg.mp4";
+import { Link } from "react-router-dom";
 
 const CoursePage = () => {
   const [isFormVisible, setIsFormVisible] = useState(false);
@@ -85,20 +86,30 @@ const CoursePage = () => {
                   <div className="text-3xl sm:text-4xl text-purple-700 mb-4">
                     <i className={`${course.icon} text-purple-700`}></i>
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold mb-4 font-outfit text-purple-800">
+                  <h3 className="text-lg sm:text-xl  font-bold mb-4 font-outfit text-purple-800">
                     {course.title}
                   </h3>
-                  <p className="text-gray-700 font-poppins mb-4">
+                  <p className="text-gray-700 mx-5 text-[15px] font-poppins mb-4">
                     {course.description}
                   </p>
 
                   {/* Book Demo Button */}
-                  <button
-                    onClick={() => handleBookDemo(course.title)}
-                    className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-all"
-                  >
-                    Book a Demo
-                  </button>
+                  <div className="flex gap-5 justify-center">
+                    <button
+                      onClick={() => handleBookDemo(course.title)}
+                      className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-all"
+                    >
+                      Book a Demo
+                    </button>
+
+                    <Link
+                      to={`/courses/course-details/${index}`}
+                      onClick={() => handleBookDemo(course.title)}
+                      className="bg-green-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-all"
+                    >
+                      Learn More
+                    </Link>
+                  </div>
 
                   <div className="absolute opacity-0 group-hover:opacity-100 -rotate-90 p-2 border-purple-700 border rounded-full top-4 right-4 group-hover:rotate-0 transition-transform duration-500">
                     <FaArrowRight className="text-purple-700 text-2xl" />

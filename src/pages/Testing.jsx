@@ -1,104 +1,55 @@
 import React from "react";
-import {
-  FaPhone,
-  FaUserTie,
-  FaChalkboardTeacher,
-  FaComment,
-  FaFileInvoice,
-  FaUserCheck,
-  FaCertificate,
-  FaUsers,
-  FaBriefcase,
-} from "react-icons/fa";
+// import { useParams } from "react-router-dom";
+// import { courses } from "../assets/data"; // Import the courses array
 
-const steps = [
-  {
-    icon: <FaPhone />,
-    title: "Consultation Call",
-    description: "Initial discussion with a consultant.",
-  },
-  {
-    icon: <FaUserTie />,
-    title: "Technical Assessment",
-    description: "Expert call based on prior knowledge.",
-  },
-  {
-    icon: <FaChalkboardTeacher />,
-    title: "Free Demo Booking",
-    description: "Scheduling a demo session.",
-  },
-  {
-    icon: <FaComment />,
-    title: "Feedback Collection",
-    description: "Gathering feedback.",
-  },
-  {
-    icon: <FaFileInvoice />,
-    title: "Fee Quotation",
-    description: "Providing course pricing details.",
-  },
-  {
-    icon: <FaUserCheck />,
-    title: "Enrollment",
-    description: "Completing the registration process.",
-  },
-  {
-    icon: <FaCertificate />,
-    title: "Certification",
-    description: "Awarding certificates upon completion.",
-  },
-  {
-    icon: <FaUsers />,
-    title: "Job Grooming Sessions",
-    description: "Preparing for the job market.",
-  },
-  {
-    icon: <FaBriefcase />,
-    title: "Interview Scheduling",
-    description: "Helping with job placements.",
-  },
-];
+const CourseDetailPage = () => {
+  // const { courseId } = useParams(); // Get the course ID from the URL
+  // const course = courses[courseId]; // Find the course by ID
 
-const HowWeWork = () => {
+  // if (!course) {
+  //   return <div>Course not found!</div>;
+  // }
+
   return (
-    <div className="max-w-7xl mx-auto py-16 px-6 text-center bg-gray-50">
-      <h2 className="text-4xl font-bold mb-12 text-gray-800">How We Work</h2>
-      <div className="relative w-full flex flex-col items-center">
-        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-yellow-400 to-blue-500 h-full"></div>
-        {steps.map((step, index) => (
-          <div
-            key={index}
-            className={`flex items-center w-full max-w-2xl mb-10 ${
-              index % 2 === 0 ? "justify-start" : "justify-end"
-            }`}
-          >
-            {index % 2 === 0 && (
-              <div className="flex items-center space-x-4">
-                <div className="text-4xl text-yellow-500">{step.icon}</div>
-                <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 w-80 text-left">
-                  <h3 className="font-semibold text-lg text-gray-800 mb-2">
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm">{step.description}</p>
-                </div>
-              </div>
-            )}
-            {index % 2 !== 0 && (
-              <div className="flex items-center space-x-4">
-                <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 w-80 text-left">
-                  <h3 className="font-semibold text-lg text-gray-800 mb-2">
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm">{step.description}</p>
-                </div>
-                <div className="text-4xl text-blue-500">{step.icon}</div>
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
-    </div>
+    // <div className="min-h-screen bg-gray-100 py-10 px-4 md:px-[100px]">
+    //   <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+    //     <div className="text-4xl text-purple-700 mb-6">{course.icon}</div>
+    //     <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-purple-800">
+    //       {course.title}
+    //     </h1>
+    //     <p className="text-gray-700 text-lg mb-6">{course.description}</p>
+
+    //     <div className="mb-6">
+    //       <h2 className="text-2xl font-semibold mb-4 text-purple-700">
+    //         What You'll Learn
+    //       </h2>
+    //       <ul className="list-disc list-inside text-gray-700">
+    //         <li>Master the fundamentals of {course.title}</li>
+    //         <li>Hands-on projects and real-world applications</li>
+    //         <li>Expert-led training and mentorship</li>
+    //         <li>Career guidance and certification</li>
+    //       </ul>
+    //     </div>
+
+    //     <div className="mb-6">
+    //       <h2 className="text-2xl font-semibold mb-4 text-purple-700">
+    //         Course Outline
+    //       </h2>
+    //       <ul className="list-decimal list-inside text-gray-700">
+    //         <li>Introduction to {course.title}</li>
+    //         <li>Core concepts and tools</li>
+    //         <li>Advanced techniques</li>
+    //         <li>Capstone project</li>
+    //       </ul>
+    //     </div>
+
+    //     <button className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition-all">
+    //       Enroll Now
+    //     </button>
+    //   </div>
+    // </div>
+    <h1>hello word</h1>
   );
 };
 
-export default HowWeWork;
+export default CourseDetailPage;

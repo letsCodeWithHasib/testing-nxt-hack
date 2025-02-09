@@ -1,6 +1,9 @@
 import nasscom from "./Nasscom.jpeg";
 import christ from "./christ-college.jpeg";
 import its from "./its-college.jpeg";
+import anant from "./anant-photo.jpeg";
+import ayush from "./ayush-photo.jpeg";
+import ibran from "./ibran-photo.jpeg";
 
 export const popularCourses = [
   {
@@ -241,5 +244,26 @@ export const previousWork = [
       "Covered data visualization and business intelligence using Power BI and Tableau, including data import, transformation, and visualization techniques. Students learned how to create interactive dashboards, reports, and analytics to gain insights from large datasets and make data-driven decisions.",
     image: its,
     name: "ITS",
+  },
+];
+
+export const employees = [
+  {
+    name: "Anant Singh",
+    role: "Sales Manager",
+    image: anant,
+    bio: "With over X years of experience in EdTech sales, they have successfully led dynamic teams, expanded market reach, and driven significant revenue growth through strategic sales initiatives.",
+  },
+  {
+    name: "Ayush Sharma",
+    role: "VP of Sales",
+    image: ayush,
+    bio: "Years of experience in EdTech innovation, they lead strategic product development to create engaging learning experiences",
+  },
+  {
+    name: "Ibran Ali",
+    role: "Product Manager",
+    image: ibran,
+    bio: "Ibran is a visionary leader with over 4 years of experience in the edtech industry.",
   },
 ];

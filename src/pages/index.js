@@ -7,6 +7,8 @@ import Consulting from "./Consulting";
 import WorkSupport from "./WorkSupport";
 import ProjectDevelopmentAssistance from "./ProjectDevelopmentAssistance";
 import NotFound from "./NotFound";
+import CourseDetails from "./CourseDetails";
+import AboutUs from "./AboutUs";
 
 export {
   Home as HomePage,
@@ -18,4 +20,6 @@ export {
   WorkSupport as WorkSupportPage,
   ProjectDevelopmentAssistance as ProjectDevelopmentAssistancePage,
   NotFound as NotFoundPage,
+  CourseDetails as CourseDetailsPage,
+  AboutUs as AboutUsPage,
 };

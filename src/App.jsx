@@ -10,6 +10,8 @@ import {
   WorkSupportPage,
   ProjectDevelopmentAssistancePage,
   NotFoundPage,
+  CourseDetailsPage,
+  AboutUsPage,
 } from "./pages";
 
 import Testing from "./pages/Testing";
@@ -25,6 +27,8 @@ const App = () => {
         <Route path="/" element={<Unprotected />}>
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<HomePage />} />
+          <Route path="/about-us" element={<AboutUsPage />} />
+          <Route path="/about" element={<Navigate to="/about-us" />} />
           <Route path="/services" element={<ServicePage />} />
           <Route
             path="/services/corporate-trainings"
@@ -36,11 +40,16 @@ const App = () => {
           />
           <Route path="/services/consulting" element={<ConsultingPage />} />
           <Route path="/services/courses" element={<CoursePage />} />
-          <Route path="/courses" element={<CoursePage />} />
           <Route path="/services/work-support" element={<WorkSupportPage />} />
           <Route
             path="/services/project-development-assistance"
             element={<ProjectDevelopmentAssistancePage />}
+          />
+
+          <Route path="/courses" element={<CoursePage />} />
+          <Route
+            path="/courses/course-details/:id"
+            element={<CourseDetailsPage />}
           />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
