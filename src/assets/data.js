@@ -250,13 +250,13 @@ export const previousWork = [
 export const employees = [
   {
     name: "Anant Singh",
-    role: "Sales Manager",
+    role: "Technical Consultant",
     image: anant,
-    bio: "With over X years of experience in EdTech sales, they have successfully led dynamic teams, expanded market reach, and driven significant revenue growth through strategic sales initiatives.",
+    bio: "Years of experience in EdTech sales, they have successfully led dynamic teams, expanded market reach, and driven significant revenue growth through strategic sales initiatives.",
   },
   {
     name: "Ayush Sharma",
-    role: "VP of Sales",
+    role: "Technical Consultant",
     image: ayush,
     bio: "Years of experience in EdTech innovation, they lead strategic product development to create engaging learning experiences",
   },
