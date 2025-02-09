@@ -1,9 +1,12 @@
 import nasscom from "./Nasscom.jpeg";
-import christ from "./christ-college.jpeg";
-import its from "./its-college.jpeg";
+import itsSarmrat from "./christ-college.jpeg";
+import itsKirti from "./its-college.jpeg";
 import anant from "./anant-photo.jpeg";
 import ayush from "./ayush-photo.jpeg";
 import ibran from "./ibran-photo.jpeg";
+import christPurushottam from "./purushottam-christ.jpeg";
+import mangalamSandeep from "./sandeep-manglam.jpeg";
+import itsArif from "./its-arif.jpeg";
 
 export const popularCourses = [
   {
@@ -230,20 +233,44 @@ export const previousWork = [
     name: "Nasscom",
   },
   {
-    title: "Crypto Currency & Data Science",
+    title: "Crypto Currency & Finance Trading",
     year: "2024",
     description:
-      "Covered the intersection of Cryptocurrency and Data Science, including blockchain fundamentals, cryptocurrency analysis, data collection and processing for blockchain data, predictive modeling for crypto markets, and using tools like Python, Pandas, and machine learning techniques to analyze and forecast cryptocurrency trends",
-    image: christ,
-    name: "christ",
+      "Crypto Currency & Finance Trading covers blockchain fundamentals, cryptocurrency wallets, and secure transactions. Learn trading strategies, technical & fundamental analysis, DeFi, NFTs, and risk management. Gain hands-on experience with live trading sessions and market insights.",
+    image: christPurushottam,
+    name: "Christ University",
   },
   {
-    title: "PowerBi & Tableu",
+    title: "PowerBi,Excel & SQL",
+    year: "2024",
+    description:
+      "Power BI, Excel & SQL covers data analysis, visualization, and database management. Learn to create interactive dashboards in Power BI, automate reports in Excel, and query databases using SQL for data-driven decision-making.",
+    image: itsArif,
+    name: "ITS University",
+  },
+  {
+    title: "Powerbi & SQL",
     year: "2024",
     description:
       "Covered data visualization and business intelligence using Power BI and Tableau, including data import, transformation, and visualization techniques. Students learned how to create interactive dashboards, reports, and analytics to gain insights from large datasets and make data-driven decisions.",
-    image: its,
-    name: "ITS",
+    image: itsSarmrat,
+    name: "ITS University",
+  },
+  {
+    title: "Cyber-Security & Ethical Hacking",
+    year: "2024",
+    description:
+      "Cyber Security & Ethical Hacking covers network security, penetration testing, and ethical hacking techniques. Learn vulnerability assessment, encryption, malware analysis, and hands-on hacking tools to protect systems from cyber threats.",
+    image: mangalamSandeep,
+    name: "K R Mangalam University",
+  },
+  {
+    title: "Tableu & Excel",
+    year: "2024",
+    description:
+      "Tableau & Excel covers data visualization, reporting, and analytics. Learn to create interactive dashboards in Tableau and automate data processing in Excel for effective business insights and decision-making.",
+    image: itsKirti,
+    name: "ITS University",
   },
 ];
 
@@ -255,7 +282,7 @@ export const employees = [
     bio: "Years of experience in EdTech sales, they have successfully led dynamic teams, expanded market reach, and driven significant revenue growth through strategic sales initiatives.",
   },
   {
-    name: "Ayush Sharma",
+    name: "Ayush Srivastava",
     role: "Technical Consultant",
     image: ayush,
     bio: "Years of experience in EdTech innovation, they lead strategic product development to create engaging learning experiences",
