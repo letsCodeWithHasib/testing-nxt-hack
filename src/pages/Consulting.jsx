@@ -8,6 +8,9 @@ import {
   FaTimes,
 } from "react-icons/fa";
 
+const BOT_TOKEN = "YOUR_BOT_TOKEN"; // Replace with your Telegram bot token
+const CHAT_ID = 6431471143; // Replace with your Telegram chat ID
+
 const ConsultingPage = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -20,10 +23,32 @@ const ConsultingPage = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const sendToTelegram = async () => {
+    const message = `🚀 New Consultation Request 🚀\n\n👤 Name: ${formData.name}\n📧 Email: ${formData.email}\n💬 Message: ${formData.message}`;
+
+    try {
+      await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id: CHAT_ID,
+          text: message,
+          parse_mode: "Markdown",
+        }),
+      });
+
+      alert("Your free consultation request has been submitted!");
+      setIsOpen(false);
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Error sending message to Telegram:", error);
+      alert("Failed to send request. Please try again.");
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Your free consultation request has been submitted!");
-    setIsOpen(false);
+    sendToTelegram();
   };
 
   return (
@@ -124,96 +149,7 @@ const ConsultingPage = () => {
         </div>
       )}
 
-      <section
-        className="py-10 bg-white mx-[100px] px-[100px] mt-10"
-        id="course-outcomes"
-      >
-        <h2 className="text-5xl font-semibold mb-10 font-outfit text-purple-700">
-          Course Outcomes
-        </h2>
-        <ul className="list-disc pl-8 text-xl text-gray-600">
-          <li>Master key programming concepts and languages</li>
-          <li>Develop real-world applications</li>
-          <li>Gain industry-recognized certification</li>
-        </ul>
-      </section>
-
-      <div className="mt-16 max-w-3xl mx-auto mb-10">
-        <h3 className="text-2xl font-bold text-center">
-          Frequently Asked Questions
-        </h3>
-        <div className="mt-6 space-y-4">
-          <div className="bg-white p-4 shadow-lg rounded-lg">
-            <h4 className="text-lg font-semibold">
-              Who can book a free consultation?
-            </h4>
-            <p className="text-gray-600">
-              Anyone struggling to select his domain and looking for career
-              guidance in the IT industry.
-            </p>
-          </div>
-          <div className="bg-white p-4 shadow-lg rounded-lg">
-            <h4 className="text-lg font-semibold">
-              How long does the session last?
-            </h4>
-            <p className="text-gray-600">
-              Each session lasts for about 30-45 minutes. Sometimes, It can go
-              beyond this too.
-            </p>
-          </div>
-          <div className="bg-white p-4 shadow-lg rounded-lg">
-            <h4 className="text-lg font-semibold">
-              What cost I need to pay for this session ?
-            </h4>
-            <p className="text-gray-600">
-              This session is completely free for you.
-            </p>
-          </div>
-          <div className="bg-white p-4 shadow-lg rounded-lg">
-            <h4 className="text-lg font-semibold">
-              Why to choose Nxthack IT solutions?
-            </h4>
-            <ol>
-              <li>
-                <strong>1. Industry Experts</strong> : Our trainers are seasoned
-                professionals with years of hands-on experience in their
-                respective fields. They bring real-world insights to the
-                training sessions.
-              </li>
-              <li>
-                <strong>2. Customized Programs</strong> : Our trainers are We
-                tailor our training programs to meet the specific needs of your
-                organization, ensuring maximum relevance and impact.
-              </li>
-              <li>
-                <strong>3. Hands-On Learning</strong> : Our trainers are Our
-                training sessions are highly interactive, with a focus on
-                practical, hands-on learning to ensure immediate applicability.
-              </li>
-            </ol>
-          </div>
-        </div>
-      </div>
-
       <TestimonialSection />
-
-      <section className="py-10 bg-gray-100 px-[100px] mx-[100px]" id="contact">
-        <h2 className="text-5xl font-semibold mb-10 font-outfit text-purple-700">
-          Get in Touch
-        </h2>
-        <p className="text-xl text-gray-600 mb-6">
-          Feel free to reach out to us if you have any questions or need further
-          information.
-        </p>
-        <div className="flex space-x-6">
-          <div className="text-lg text-gray-700">
-            <strong>Email:</strong> info@nxthackitsolutions.com
-          </div>
-          <div className="text-lg text-gray-700">
-            <strong>Phone:</strong> +91 9205110948
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

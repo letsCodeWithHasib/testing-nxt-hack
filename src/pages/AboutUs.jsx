@@ -67,60 +67,6 @@ const AboutUs = () => {
         </div>
       </div>
 
-      {/* Team Section */}
-      <div className="container mx-auto px-4 py-16">
-        <h2 className="text-3xl sm:text-4xl font-bold text-purple-800 mb-8 text-center">
-          Meet Our Team
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {employees.map((employee, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-lg shadow-lg text-center"
-            >
-              <img
-                src={employee.image}
-                alt={employee.name}
-                className="w-32 h-32 rounded-full mx-auto mb-4"
-              />
-              <h3 className="text-2xl  font-bold text-purple-700 mb-2">
-                {employee.name}
-              </h3>
-              <p className="text-gray-600 text-xl mb-4 font-semibold">
-                {employee.role}
-              </p>
-              <p className="text-gray-700 mb-4">{employee.bio}</p>
-              {/* <div className="flex justify-center space-x-4">
-                <a
-                  href={employee.social.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:text-blue-800"
-                >
-                  <FaLinkedin className="w-6 h-6" />
-                </a>
-                <a
-                  href={employee.social.twitter}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-400 hover:text-blue-600"
-                >
-                  <FaTwitter className="w-6 h-6" />
-                </a>
-                <a
-                  href={employee.social.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-700 hover:text-gray-900"
-                >
-                  <FaGithub className="w-6 h-6" />
-                </a>
-              </div> */}
-            </div>
-          ))}
-        </div>
-      </div>
-
       {/* Call to Action Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-800 py-16 text-white text-center">
         <h2 className="text-3xl sm:text-4xl font-bold mb-4">
